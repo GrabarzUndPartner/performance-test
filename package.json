@@ -1,0 +1,46 @@
+{
+  "name": "perfomance-test",
+  "version": "0.0.0",
+  "description": "Performance Test",
+  "repository": "GrabarzUndPartner/performance-test",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Thorn Walli <thorn.walli@grabarzundpartner.de>"
+    }
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/module.js",
+  "scripts": {
+    "dev": "nuxt example",
+    "generate": "nuxt generate --config-file example/nuxt.config.js",
+    "start:generate": "yarn generate && yarn express-server --dist dist/",
+    "lint": "eslint --ext .js,.vue .",
+    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
+    "test": "yarn lint && jest",
+    "express-server": "node ./tools/express-server.js --dist dist"
+  },
+  "dependencies": {
+    "change-case": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@nuxtjs/eslint-config": "latest",
+    "@nuxtjs/module-test-utils": "latest",
+    "babel-eslint": "latest",
+    "babel-jest": "latest",
+    "eslint": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "nuxt-edge": "latest",
+    "standard-version": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

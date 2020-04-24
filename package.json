@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "nuxt example",
     "generate": "nuxt generate --config-file example/nuxt.config.js",
-    "start:generate": "yarn generate && yarn express-server --dist dist/",
+    "generate:start": "yarn generate && yarn express-server --dist dist/",
     "lint": "eslint --ext .js,.vue .",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
     "test": "yarn lint && jest",
